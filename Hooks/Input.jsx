@@ -1,9 +1,20 @@
 import React from "react";
 
-const Input = () => {
+const Input = ({
+  placeholder = "Enter",
+  disabled = false,
+  value,
+  onChange,
+}) => {
   return (
     <div>
-      <input type="text" placeholder="Enter" disabled />
+      <input
+        type="text"
+        placeholder={placeholder}
+        disabled={disabled}
+        value={value}
+        onChange={onChange}
+      />
     </div>
   );
 };
