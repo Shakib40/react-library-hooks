@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/Shakib40/react-library-hooks/issues"
   },
-  "homepage": "https://github.com/Shakib40/react-library-hooks#readme"
+  "homepage": "https://github.com/Shakib40/react-library-hooks#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
+    "@babel/preset-react": "^7.23.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
