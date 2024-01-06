@@ -1,0 +1,13 @@
+npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react react react-dom
+
+npm version <major|minor|patch>
+
+
+COMMANDS LINE :
+
+npm run build
+git add .
+git commit -m "Updated"
+git push origin main
+npm version patch
+npm publish
