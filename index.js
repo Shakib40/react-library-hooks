@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.Input = void 0;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-var Input = function Input(_ref) {
+var Input = exports.Input = function Input(_ref) {
   var _ref$placeholder = _ref.placeholder,
     placeholder = _ref$placeholder === void 0 ? "Enter" : _ref$placeholder,
     _ref$disabled = _ref.disabled,
@@ -21,17 +21,7 @@ var Input = function Input(_ref) {
     onChange: onChange
   }));
 };
-var _default = exports["default"] = Input;
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "Input", {
-  enumerable: true,
-  get: function get() {
-    return _Input["default"];
-  }
-});
-var _Input = _interopRequireDefault(require("./Hooks/Input.js"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _Input = require("./Hooks/Input.js");
+(0, _Input.Input)();

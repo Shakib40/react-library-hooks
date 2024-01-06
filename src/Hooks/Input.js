@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = ({
+export const Input = ({
   placeholder = "Enter",
   disabled = false,
   value,
@@ -18,5 +18,3 @@ const Input = ({
     </div>
   );
 };
-
-export default Input;
