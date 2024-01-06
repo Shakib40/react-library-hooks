@@ -3,6 +3,10 @@
   "version": "1.0.15",
   "description": "",
   "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src/styles"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d dist --presets=@babel/preset-env,@babel/preset-react"

@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Input = void 0;
 var _react = _interopRequireDefault(require("react"));
-var _inputModule = _interopRequireDefault(require("./input.module.css"));
+var _inputModule = _interopRequireDefault(require("../styles/input.module.css"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 var Input = exports.Input = function Input(_ref) {
   var label = _ref.label,
