@@ -1,2 +1,2 @@
-import { Input } from "./Hooks/Input.js";
-Input();
+export { Input } from "./Hooks/Input.js";
+export { Textarea } from "./Hooks/Textarea.js";
