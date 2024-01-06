@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./input.module.css";
 
 export const Input = ({
   label,
@@ -10,8 +11,9 @@ export const Input = ({
   onBlur,
   onKeyDown,
   errorMessage,
-  showClearButton,
-  onClear,
+  inputStyle, // Custom style for the input
+  labelStyle, // Custom style for the label
+  errorStyle, // Custom style for the error message
 }) => {
   const handleFocus = (e) => {
     if (onFocus) {
@@ -32,8 +34,10 @@ export const Input = ({
   };
 
   return (
-    <div>
-      {label && <label>{label}</label>}
+    <div className={classes["input-container"]}>
+      <div className={classes["label"]} style={labelStyle}>
+        {label}
+      </div>
       <input
         type="text"
         placeholder={placeholder}
@@ -43,8 +47,13 @@ export const Input = ({
         onFocus={handleFocus}
         onBlur={handleBlur}
         onKeyDown={handleKeyDown}
+        style={inputStyle} // Apply custom style to the input
       />
-      {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
+      {errorMessage && (
+        <div className={classes["error-message"]} style={errorStyle}>
+          {errorMessage}
+        </div>
+      )}
     </div>
   );
 };

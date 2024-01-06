@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Input = void 0;
 var _react = _interopRequireDefault(require("react"));
+var _inputModule = _interopRequireDefault(require("./input.module.css"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 var Input = exports.Input = function Input(_ref) {
   var label = _ref.label,
@@ -18,8 +19,9 @@ var Input = exports.Input = function Input(_ref) {
     onBlur = _ref.onBlur,
     onKeyDown = _ref.onKeyDown,
     errorMessage = _ref.errorMessage,
-    showClearButton = _ref.showClearButton,
-    onClear = _ref.onClear;
+    inputStyle = _ref.inputStyle,
+    labelStyle = _ref.labelStyle,
+    errorStyle = _ref.errorStyle;
   var handleFocus = function handleFocus(e) {
     if (onFocus) {
       onFocus(e);
@@ -35,7 +37,12 @@ var Input = exports.Input = function Input(_ref) {
       onKeyDown(e);
     }
   };
-  return /*#__PURE__*/_react["default"].createElement("div", null, label && /*#__PURE__*/_react["default"].createElement("label", null, label), /*#__PURE__*/_react["default"].createElement("input", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
+    className: _inputModule["default"]["input-container"]
+  }, /*#__PURE__*/_react["default"].createElement("div", {
+    className: _inputModule["default"]["label"],
+    style: labelStyle
+  }, label), /*#__PURE__*/_react["default"].createElement("input", {
     type: "text",
     placeholder: placeholder,
     disabled: disabled,
@@ -43,10 +50,10 @@ var Input = exports.Input = function Input(_ref) {
     onChange: onChange,
     onFocus: handleFocus,
     onBlur: handleBlur,
-    onKeyDown: handleKeyDown
+    onKeyDown: handleKeyDown,
+    style: inputStyle // Apply custom style to the input
   }), errorMessage && /*#__PURE__*/_react["default"].createElement("div", {
-    style: {
-      color: "red"
-    }
+    className: _inputModule["default"]["error-message"],
+    style: errorStyle
   }, errorMessage));
 };
