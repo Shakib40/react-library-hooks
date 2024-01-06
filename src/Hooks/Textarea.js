@@ -8,8 +8,7 @@ export const Textarea = ({
 }) => {
   return (
     <div>
-      <input
-        type="text"
+      <textarea
         placeholder={placeholder}
         disabled={disabled}
         value={value}
