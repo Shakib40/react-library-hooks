@@ -11,3 +11,5 @@ git commit -m "Updated"
 git push origin 
 npm version patch
 npm publish
+
+// "build": "npx babel src --out-file index.js"
