@@ -1,21 +1,92 @@
-.input-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
 .label {
+  font-size: 0.75rem;
+  -webkit-transform: translateY(-14px);
+  transform: translateY(-14px);
+  display: block;
+  font-weight: normal;
+  left: 0;
+  margin: 0;
+  padding-top: 16px;
+  padding-right: 12px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 100%;
+}
+
+.control {
+  background: #eee;
+  border-radius: 8px 8px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.bar {
+  border-bottom: 2px solid #b11adc;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 1%;
+}
+
+.input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: #333;
+  display: block;
   font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 5px;
+  margin-top: 24px;
+  outline: 0;
+  padding: 0 0px 6px 12px;
+  width: 100%;
 }
 
-.input-field {
-  border: 1px solid #ccc;
-  padding: 5px;
+.input:-ms-input-placeholder ~ .label {
+  font-size: 12px;
+  transform: translateY(0);
 }
 
-.error-message {
-  color: red;
-  margin-top: 5px;
+.input:placeholder-shown ~ .label {
+  font-size: 12px;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.input:focus ~ .label {
+  color: #b11adc;
+  font-size: 12px;
+  -webkit-transform: translateY(-14px);
+  transform: translateY(-14px);
+}
+
+.input:focus ~ .bar {
+  border-bottom: 2px solid #b11adc;
+  -webkit-transform: scaleX(150);
+  transform: scaleX(150);
+}
+
+.helperText {
+  height: 16px;
+  padding: 0;
+  margin: 0.25em;
+  font-size: 80%;
+  color: rgba(0, 0, 0, 0.6);
 }
